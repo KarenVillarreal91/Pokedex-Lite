@@ -1,27 +1,31 @@
-# Pokedex
+# Pokedex - Lite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+##Login
+<p align="center">
+  <img src='https://firebasestorage.googleapis.com/v0/b/pokedex-kv.appspot.com/o/login.png?alt=media&token=c75eb876-862f-4e53-a51b-18ea2f04d1b5' width='200'>
+</p>
 
-## Development server
+##Principal
+Shows the list of pokemon that can be clicked to see more information about them.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p align="center">
+  <img src='https://firebasestorage.googleapis.com/v0/b/pokedex-kv.appspot.com/o/principal.png?alt=media&token=3f5ac35b-e683-4cfd-8e32-58a3e709f25d' width='200'>
+</p>
 
-## Code scaffolding
+##Pokemon info
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p align="center">
+  <img src='https://firebasestorage.googleapis.com/v0/b/pokedex-kv.appspot.com/o/info.png?alt=media&token=0b01bbb8-e076-43b3-90d1-057c2147c085' width='200'>
+</p>
 
-## Build
+##Pokemon editor
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<p align="center">
+  <img src='https://firebasestorage.googleapis.com/v0/b/pokedex-kv.appspot.com/o/editor.png?alt=media&token=ec7a8278-a077-4575-80d0-a46c08942977' width='200'>
+</p>
 
-## Running unit tests
+##Add a new pokemon
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<p align="center">
+  <img src='https://firebasestorage.googleapis.com/v0/b/pokedex-kv.appspot.com/o/new.png?alt=media&token=83369353-7804-4ea9-8ba1-ec3a70041050' width='200'>
+</p>
