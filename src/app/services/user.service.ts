@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { getAuth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class UserService {
   users:any;
   allPokemon:any;
 
-  constructor(private auth:AngularFireAuth, private firestore:AngularFirestore) 
+  constructor(private firestore:AngularFirestore) 
   {
     this.getCollection('users').subscribe((data)=>{
       this.users = data;
@@ -24,12 +24,14 @@ export class UserService {
 
   login(user:any)
   {
-    return this.auth.signInWithEmailAndPassword(user.name + '@pokedex.com', user.password);
+    const auth = getAuth();
+    return signInWithEmailAndPassword(auth, user.name + '@pokedex.com', user.password);
   }
 
   logOut()
   {
-    return this.auth.signOut();
+    const auth = getAuth();
+    return signOut(auth);
   }
 
   getCurrentUser()
