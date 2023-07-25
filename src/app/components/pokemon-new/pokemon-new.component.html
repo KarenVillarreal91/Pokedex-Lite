@@ -1,0 +1,13 @@
+<div class="container new center">
+    <h2 class="new-header">Pokedex - Lite</h2>
+    <div class="new-container">
+        <a routerLink="../principal"><i class="bi bi-arrow-left"></i></a>
+        <div>
+            <p>Pokemon ID <input type="number" class="form-control" [(ngModel)]="id"></p>
+        </div>
+        <p class="error">{{this.error}}</p>
+        <p class="success">{{this.success}}</p>
+        <button (click)="add()">Add</button>
+    </div>
+</div>
+

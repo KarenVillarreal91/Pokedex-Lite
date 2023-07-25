@@ -1,0 +1,9 @@
+<div class="container login center">
+    <h2 class="login-header">Pokedex - Lite</h2>
+    <div class="login-container">
+        <p><label>Username</label><input class="form-control" type="text" [(ngModel)]="user"></p>
+        <p><label>Password</label><input class="form-control" type="password" [(ngModel)]="password"></p>
+        <p class="error">{{this.error}}</p>
+        <p><input class="rounded" type="submit" (click)='login()' value="Login"></p>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+
+.container{
+    max-width: 20%;
+    min-width: 360px;
+}
+
+.center{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.login-header {
+    background-image: linear-gradient(to top, #d5ecff 0%, #f8fcff 100%);
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+    color: #3e76c9;
+    margin: 0px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom: 1px solid #a0d1ff;
+}
+
+.login-container {
+    background-image: linear-gradient(to bottom, #d5ecff 0%, #f8fcff 100%);
+    padding: 12px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+
+    .error{
+      padding: unset;
+      color: #dd5454;
+      text-align: center;
+      margin: 0;
+    }
+}
+
+.login p {
+  padding: 12px;
+  color: #3e76c9;
+}
+
+/* Button input style */
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  outline: 0;
+  font-size: 0.95em;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    background: #ffffff00;
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid #a0d1ff;
+    border-radius: 1px;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 0.15rem #a0d1ff4a;
+}
+
+/* Button style */
+
+.login input[type="submit"],
+.login input[type="reset"] {
+  width: 50%;
+  font-weight: 600;
+  margin: auto;
+  background-image: linear-gradient(to right, #a7d4ff 0%, #e0f2ff 51%, #a7d4ff 100%);
+  border-color: transparent;
+  color: #214883;
+  margin-top: 5%;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.login input[type="submit"]:hover,
+.login input[type="reset"]:hover {
+  background-position: right center;
+}
+
+/* Button focus effect */
+.login input[type="submit"]:active,
+.login input[type="reset"]:active {
+    scale: 90%;
+}

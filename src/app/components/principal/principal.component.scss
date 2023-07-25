@@ -1,0 +1,119 @@
+.container{
+    max-width: 25%;
+    min-width: 360px;
+    text-transform: capitalize;
+    margin-top: 55px;
+    padding-bottom: 55px;
+}
+
+.principal-header {
+    background-image: linear-gradient(to top, #d5ecff 0%, #f8fcff 100%);
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+    color: #3e76c9;
+    margin: 0px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom: 1px solid #a0d1ff;
+}
+
+.principal-container {
+    background-image: linear-gradient(to bottom, #d5ecff 0%, #f8fcff 100%);
+    padding: 12px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.principal p {
+  padding: 12px;
+  color: #3e76c9;
+}
+
+.top-bar{
+    display: table;
+    margin: 15px;
+    text-align: center;
+    width: -webkit-fill-available;
+    font-weight: 600;
+    margin-top: 0;
+
+    p{
+        height: 20px;
+        padding-bottom: 0px;
+    }
+    .type{
+        display: table-cell;
+        width: 25%;
+    }
+    .name{
+        display: table-cell;
+        width: 60%;
+        text-align: start;
+    }
+}
+
+.pokemon{
+    display: table;
+    border: 1px solid #3e76c95c;
+    border-radius: 20px;
+    margin: 15px;
+    width: -webkit-fill-available;
+    transition: 0.3s;
+    cursor: pointer;
+    
+    .type{
+        width: 27%; 
+        text-align: center;
+    }
+    .lvl{
+        width: 16%; 
+        border-right: 0; 
+        text-align: center;
+    }
+}
+
+.pokemon p{
+    display: table-cell;
+    border-right: 1px solid #3e76c95c;
+}
+
+/* Button style */
+
+.new{
+    text-align: right; 
+    margin: 15px;
+}
+
+.new button {
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #a7d4ff 0%, #e0f2ff 51%, #a7d4ff 100%);
+    border-color: transparent;
+    color: #214883;
+    margin-top: 5%;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.new button:hover {
+  background-position: right center;
+}
+
+.btn-logout{
+    color: #d13434;
+    display: flex;
+    align-items: center;
+    
+    i{
+        font-size: 25px;
+        margin-right: 5px;
+    }
+}
+/* Button focus effect */
+.new button:active,
+.pokemon:active {
+    scale: 90%;
+}

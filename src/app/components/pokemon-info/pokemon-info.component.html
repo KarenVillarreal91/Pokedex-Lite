@@ -1,0 +1,58 @@
+<div class="container info">
+    <h2 class="info-header">Pokedex - Lite</h2>
+    <div class="info-container">
+        <a (click)="back()"><i class="bi bi-arrow-left"></i></a>
+        <a *ngIf="!this.editor" (click)="this.editor = true" style="float: right;"><i class="bi bi-pencil-square"></i></a>
+        <div class="top-bar">
+            <p class="type">Type</p>
+            <p class="name">Name</p>
+            <p>Lvl</p>
+        </div>
+        <div class="pokemon">
+            <p class="type">
+                <span style="display: flex;" *ngFor="let type of inputPokemon.type">
+                    <i *ngIf="this.editor" class="bi bi-x-lg remove-icon"></i> <!-- Editor -->
+                    {{type}}<br>
+                </span>
+                <button *ngIf="this.editor" class="btn"><i class="bi bi-plus-lg add-icon"></i></button> <!-- Editor -->
+            </p>
+            <p *ngIf="!this.editor">{{inputPokemon.name}}</p>
+            <p *ngIf="this.editor"> <!-- Editor -->
+                <input type="text" [(ngModel)]="this.editedName">
+            </p> 
+            <p class="lvl">{{inputPokemon.lvl}}</p>
+        </div>
+
+        <div class="pokemon-img">
+            <img height="200px" [src]="inputPokemon.image">
+        </div>
+
+        <div class="abilities">
+            <h5><b>Abilities</b></h5>
+            <table>
+                <tr>
+                    <td *ngFor="let ab of inputPokemon.abilities">{{ab}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="evolution">
+            <h5><b>Evolutions</b></h5>
+            <button *ngIf="this.editor" class="btn"><i class="bi bi-plus-lg add-icon"></i></button> <!-- Editor -->
+            <div class="top-bar">
+                <p class="type">Type</p>
+                <p class="name">Name</p>
+                <p>Lvl</p>
+            </div>
+            <div class="pokemon">
+                <p class="type"><span *ngFor="let type of inputPokemon.evolution.type">{{type}}<br></span></p>
+                <p>{{inputPokemon.evolution.name}}</p>
+                <p class="lvl">{{inputPokemon.evolution.lvl}}</p>
+            </div>
+        </div>
+
+        <div class="save" *ngIf="this.editor">  <!-- Editor -->
+            <button class="btn">Save</button>
+        </div>
+    </div>
+</div>

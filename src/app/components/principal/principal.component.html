@@ -1,0 +1,21 @@
+<div class="container principal" *ngIf="!this.selectedPokemon">
+    <h2 class="principal-header">Pokedex - Lite</h2>
+    <div class="principal-container" *ngIf="this.pokemon.lenght != 0">  
+        <div class="top-bar">
+            <p class="type">Type</p>
+            <p class="name">Name</p>
+            <p>Lvl</p>
+        </div>
+        <div class="pokemon" *ngFor="let item of this.pokemon" (click)="select(item)">
+            <p class="type"><span *ngFor="let type of item.type">{{type}}<br></span></p>
+            <p>{{item.name}}</p>
+            <p class="lvl">{{item.lvl}}</p>
+        </div>
+        <div class="new">
+            <button class="btn" routerLink="../new">New</button>
+        </div>
+    </div>
+    <button class="btn btn-logout" (click)="logOut()"><i class="bi bi-box-arrow-left"></i> Log Out</button>
+</div>
+
+<app-pokemon-info *ngIf="this.selectedPokemon" (pokemonEmitter)="select($event)" [inputPokemon]="this.selectedPokemon"></app-pokemon-info>
